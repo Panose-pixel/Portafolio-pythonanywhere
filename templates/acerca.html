@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block  title%}Acerca de mi{% endblock %}
+{% block content %}
+
+    <h1 class="titulo_acerca">Acerca de mí</h1>
+    <div class="perfil">
+        <div class="perfil_img">   <!--Imagen-->
+            <img src="/static/img/Johan Liebert fanart- Insta @kaikoykey.jpeg" alt="Captura de pantalla 2025-05-16 162402.png">
+        </div>
+        <div class="perfil_contenido">
+            <div class="titulo_principal">
+                <h2>Juanangel Alvarado Hererra <br><span> Aprendiz y Futuro Ing. en Sistemas</span></h2>
+            </div>
+            <p>
+                "Donde sea que halla una sombra es porque debe haber una luz"<br>
+                -Stefan Zweig
+            <p></p>
+                <div>
+                    <a href="https://wa.me/3227732594"
+                    target="_blank">
+                    <button class="btn_contactar">contáctame</button>
+                </a>
+                </div>
+            </p>
+        </div>
+    </div>
+    <main class="contenedor_acerca">
+        {%for acerca in perfil%}
+        <section>
+            <div style="display: flex; justify-content:center;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 2.4rem; margin-right: 0.5rem" width="33" height="33" viewBox="0 0 512 512" fill="#ffffff"><path fill="#ffffff" d="M256 16c-52.5 252.632-210 277.845 0 454.688C466 293.845 308.5 268.63 256 16zM124.75 167.407C98.5 243.197 46 294.117 46 369.907S151 496 229.75 496c-157.5-126.317-105-202.278-105-328.593zm262.5 0c0 126.317 52.5 202.278-105 328.593C361 496 466 445.696 466 369.907c0-75.79-52.5-126.71-78.75-202.5z"/></svg><h2> {{ acerca.titulo }} </h2> <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 2.4rem; margin-left: 0.5rem" width="33" height="33" viewBox="0 0 512 512" fill="#ffffff"><path fill="#ffffff" d="M256 16c-52.5 252.632-210 277.845 0 454.688C466 293.845 308.5 268.63 256 16zM124.75 167.407C98.5 243.197 46 294.117 46 369.907S151 496 229.75 496c-157.5-126.317-105-202.278-105-328.593zm262.5 0c0 126.317 52.5 202.278-105 328.593C361 496 466 445.696 466 369.907c0-75.79-52.5-126.71-78.75-202.5z"/></svg>
+            </div>
+            <p>{{ acerca.contenido }}</p> <!--RECORDATORIO  COLOCAR TEXTO-->
+        </section>
+        {% endfor %}
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

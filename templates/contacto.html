@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block  title%}Contacto{% endblock %}
+{% block content %}
+    {% with mensajes = get_flashed_messages() %}
+        {% if mensajes %}
+          {% for m in mensajes %}
+          <h2>
+            <strong>{{ m }}</strong>
+          </h2> 
+            {% endfor %}
+
+        {% endif %}
+    {% endwith %}
+
+    <h1 class="titulo_principal">Mi contacto</h1>
+    <div>
+        <section>
+            <h3><span class="direccion">Estoy ubicado en la Calle 24 #22-10, Saravena, Arauca<span></h3>
+                <div id="mapa" class="mapa_contacto"></div>
+                <script>
+                    // Coordenadas de Saravena, Arauca
+                    const lat = 6.9537;
+                    const lng = -71.8751;
+                
+                    const mapa = L.map('mapa').setView([lat, lng], 16);
+                
+                    // Capa de mapa base desde OpenStreetMap
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; OpenStreetMap contributors'
+                    }).addTo(mapa);
+                
+                    // Marcador de ubicación
+                    L.marker([lat, lng]).addTo(mapa)
+                        .bindPopup('📍 Aquí estoy: Saravena, Arauca')
+                        .openPopup();
+                </script>  
+        </section>
+    </div>
+    <hr>
+
+    <div class="cotenedor_de_formulario_prin">
+        <div id="contenedor_contacto" class="seccion_contacto">
+            <div class="contenedor_formulario">
+                <h2 class="titulo_formulario">Contáctame</h2>
+
+
+                <form class="formulario_contacto" method="POST">
+                    <div class="grupo_formulario">
+                        <input type="text" id="nombre" name="nombre" required class="input_contacto">
+                        <label for="nombre" class="etiqueta_flotante">Nombre completo</label>
+                        <span class="linea_inferior"></span>
+                    </div>
+                
+                    <div class="grupo_formulario">
+                        <input type="email" id="email" name="email" required class="input_contacto">
+                        <label for="email" class="etiqueta_flotante">Correo electrónico</label>
+                        <span class="linea_inferior"></span>
+                    </div>
+                
+                    <div class="grupo_formulario">
+                        <input type="text" id="telefono" name="telefono" required class="input_contacto">
+                        <label for="telefono" class="etiqueta_flotante">Teléfono</label>
+                        <span class="linea_inferior"></span>
+                    </div>
+                
+                    <div class="grupo_formulario">
+                        <textarea type="text" id="mensaje" name="mensaje" required class="textarea_contacto"></textarea>
+                        <label for="mensaje" class="etiqueta_flotante">Tu mensaje</label>
+                        <span class="linea_inferior"></span>
+                    </div>
+                
+                    <button type="submit" class="boton_enviar">
+                        <span>Enviar mensaje</span>
+                        <svg viewBox="0 0 24 24" class="icono_enviar">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                        </svg>
+                    </button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

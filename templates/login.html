@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="encabezado">
+      <a href="/" style="color:white;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16" fill="#ffffff"><path fill="#ffffff" fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m10.25.75a.75.75 0 0 0 0-1.5H6.56l1.22-1.22a.75.75 0 0 0-1.06-1.06l-2.5 2.5a.75.75 0 0 0 0 1.06l2.5 2.5a.75.75 0 1 0 1.06-1.06L6.56 8.75z" clip-rule="evenodd"/></svg></a>
+    </div>
+    <main>
+      <div class="registro-container">
+
+        <h2>Iniciar Sesión</h2>
+        {% if mensaje %}
+            <h2>{{ mensaje }}</h2>
+        {% endif %}
+      
+        <form action="/login" method="POST">
+          <label for="Usuario">Ingrese su Usuario</label>
+          <input type="text" name="txtusername" placeholder="Usuario" required> <!--El placeholder es el texto que aparece dentro del input-->
+
+          <label for="Contraseña">Ingrese su Contraseña</label>
+          <input type="password" name="txtpassword" placeholder="Contraseña" required>
+
+          <button type="submit">Iniciar Sesión</button>
+        </form>
+
+      </div>
+    </main>
+  
+    <div clas="footer-container">
+      <footer>
+        <p>Todos los derechos reservados.</p>
+        <p>Desarrollado por Juanangel Alvarado</p>
+      </footer>
+    </div>
+</body>
+</html>

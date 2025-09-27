@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/insertar.css">
+    <title>Insertar valores</title>
+    <style>
+        * {
+            h1, h2, h3, p, label{
+                color:white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="encabezado">
+        <a href="/home"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"
+                fill="#ffffff">
+                <path fill="#ffffff" fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m10.25.75a.75.75 0 0 0 0-1.5H6.56l1.22-1.22a.75.75 0 0 0-1.06-1.06l-2.5 2.5a.75.75 0 0 0 0 1.06l2.5 2.5a.75.75 0 1 0 1.06-1.06L6.56 8.75z"
+                    clip-rule="evenodd" />
+            </svg>
+        </a>
+    </div>
+
+    <h1>Aquí puedes insertar nuevos campos a tu Portafolio:</h1>
+    <div class="contenedor_principal">
+        <section class="contenedor_insertar">
+            <form method='POST'>
+                <h2>Inserta una nueva habilidad</h2>
+                <label for="nombre">Nombre de la habilidad</label><br><br>
+                <input type="text" placeholder="Nombre" name="nombre"><br><br>
+
+                <label for="imagen svg">Imagen</label><br><br>
+                <textarea type="text" placeholder="Imagen en formato svg" name="imagen"></textarea><br><br>
+
+                <label for="contenido">Contenido</label><br><br>
+                <textarea type="text" placeholder="Contenido" name="contenido"></textarea><br><br>
+
+                <button type="submit">Insertar</button>
+            </form>
+        </section>
+
+        <section class="contenedor_insertar">
+            <form method='POST'>
+                <h2>Inserta un nuevo campo acerca de mi</h2>
+                <label for="nombre">nombre del hobbie o actividad</label><br><br>
+                <input type="text" placeholder="Nombre" name="nombre_actividad"><br><br>
+
+                <label for="imagen svg">Descripción</label><br><br>
+                <textarea type="text" placeholder="¿De qué trata?" name="contenido_actividad"></textarea><br><br>
+                <button type="submit">Insertar</button>
+            </form>
+        </section>
+
+        <br><br>
+
+    </div>
+
+
+    <div class="contenedor_principal">
+        <section class="contenedor_insertar">
+            <form method='POST'>
+                <h2>Inserta un nuevo Proyecto</h2>
+                <label for="nombre">Nombre del nuevo Proyecto</label><br><br>
+                <input type="text" placeholder="Nombre" name="nombre_proyecto"><br><br>
+
+                <label for="contenido">Descripción</label><br><br>
+                <textarea type="text" placeholder="Descripción" name="Descripcion_proyecto"></textarea><br><br>
+
+                <label for="enlace">Enlace</label><br><br>
+                <textarea type="text" placeholder="Contenido" name="Enlace_proyecto"></textarea><br><br>
+
+                <button type="submit">Insertar</button>
+            </form>
+        </section>
+    </div>
+
+    <br><br><br><br><br>
+</body>
+
+</html>

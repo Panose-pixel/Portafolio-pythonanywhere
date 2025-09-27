@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block  title%}Inicio{% endblock %}
+{% block content %}
+
+    <div class="fondo_header">
+
+
+        <div>
+            <header>
+                <h1 class="titulo_principal"> 
+                    Juanangel - Aprendiz del SENA y futuro ING. en sistemas
+                </h1>
+
+            </header>
+            <div class="ubicacion">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" width="72" height="72" stroke-width="1.25">
+                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                        <path d="M11.87 21.48a1.992 1.992 0 0 1 -1.283 -.58l-4.244 -4.243a8 8 0 1 1 13.355 -3.474">
+                        </path>
+                        <path d="M15 19l2 2l4 -4"></path>
+                    </svg>
+                </div>
+                <p>
+                    Saravena, Arauca
+                </p>
+            </div>
+            <div>
+                <a href="https://wa.me/573227732594"
+                    target="_blank">
+                    <button class="btn_contactar">contáctame</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <main class="contenedor_principal">
+        <h2 id="mayusculas">mis habilidades</h2>
+        <div id="contenedor_habilidades">
+
+
+
+
+            {% for habilidad in habilidades %}
+
+            <div id="css_box">
+                <section class="habilidad">
+                    <h3>
+                        {{ habilidad.titulo_habilidad }}
+                    </h3>
+                    <div class="contenedor_icono">
+                        {{ habilidad.icono_habilidad|safe  }}
+                    </div>
+                    <div>
+                        <p>
+                            {{ habilidad.habilidad }}
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            {% endfor %}
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

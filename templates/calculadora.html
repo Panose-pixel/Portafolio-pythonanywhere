@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block  title%}Calculadora{% endblock %}
+{% block content %}
+
+  <h1 class="titulo_principal">Bienvenido a la Calculadora</h1>
+
+<div class="contenedor_calculadora">
+  <div class="calculadora">
+    <div id="pantalla" class="pantalla">0</div>
+    <div class="teclas">
+      <button onclick="agregar('7')">7</button>
+      <button onclick="agregar('8')">8</button>
+      <button onclick="agregar('9')">9</button>
+      <button onclick="agregar('/')">/</button>
+      
+      <button onclick="agregar('4')">4</button>
+      <button onclick="agregar('5')">5</button>
+      <button onclick="agregar('6')">6</button>
+      <button onclick="agregar('*')">*</button>
+      
+      <button onclick="agregar('1')">1</button>
+      <button onclick="agregar('2')">2</button>
+      <button onclick="agregar('3')">3</button>
+      <button onclick="agregar('-')">-</button>
+
+      <button onclick="agregar('0')">0</button>
+      <button onclick="agregar('.')">.</button>
+      <button onclick="calcular()" class="igual">=</button>
+      <button onclick="agregar('+')">+</button>
+
+      <button onclick="borrarTodo()" style="grid-column: span 4; background-color: #ff4d4d;">C</button>
+    </div>
+  </div>
+</div>
+
+  <script>
+    let pantalla = document.getElementById("pantalla");
+
+    function agregar(valor) {
+      if (pantalla.innerText === "0") {
+        pantalla.innerText = valor;
+      } else {
+        pantalla.innerText += valor;
+      }
+    }
+
+    function calcular() {
+      try {
+        pantalla.innerText = eval(pantalla.innerText);
+      } catch {
+        pantalla.innerText = "Error";
+      }
+    }
+
+    function borrarTodo() {
+      pantalla.innerText = "0";
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

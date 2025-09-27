@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block  title%}Mi Proyecto Productivo{% endblock %}
+{% block content %}
+
+    <h1>Quick Recipe</h1>
+    <div class="contenedor_proyectos">
+        <div class="proyectos">
+            <h2>{{ texto[0]['titulo'] }}</h2>
+            <p>{{ texto[0]['contenido'] }}</p>    
+        </div>
+        <div class="proyectos">
+            <h2>{{ texto[1]['titulo'] }}</h2>
+            <p>{{ texto[1]['contenido'] }}</p>  
+        </div>
+        <div class="proyectos">
+            <h2>{{ texto[2]['titulo'] }}</h2>
+            <p>{{ texto[2]['contenido'] }}</p>              
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

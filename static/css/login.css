@@ -1,0 +1,111 @@
+    /* Estilos del Login */
+
+
+body{
+    margin: 0 auto;
+    background-image: url(/static/img/fondo_login.jpeg);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h3 a{
+  color: white;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.form_de_entrada{
+  border-radius: 16px;
+  border-color: solid white;
+  opacity: 2;
+  padding: 1rem;
+  margin-top: 15rem;
+  margin-bottom: 16.1rem;
+}
+
+
+.registro-container {
+  background-color: rgba(10, 20, 40, 0.6);
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000088;
+}
+
+h2 {
+    color: white;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+form {
+    color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+input {
+color: black;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: solid 1.5px black;
+  border-radius: 5px;
+  background-color: none;
+}
+
+input::placeholder {
+  color: black;
+}
+
+button {
+  padding: 0.7rem;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(244, 227, 164);
+  border: solid 1px black;
+}
+
+footer{
+    margin-top: 12.8rem;
+}
+
+
+.encabezado{
+ display: flex;
+ background-color: rgba(10, 20, 40, 0.6);
+ padding: 0.1rem;
+ font-size: small;
+ 
+}
+
+.encabezado a{
+  margin-left: 1rem;
+  font-size: 3rem;
+  color: black;
+  text-decoration: none;
+}
+
+footer{
+  color:white;
+  margin-top: 15rem;
+  margin-bottom: 0;
+}
